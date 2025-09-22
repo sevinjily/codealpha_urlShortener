@@ -15,14 +15,15 @@ namespace UrlShortener.Application.Features.Commands.CreateUrl
         }
         public async Task<ServiceResponseWithData<string>> Handle(CreateUrlMappingCommand request, CancellationToken cancellationToken)
         {
-             var existUrl=await repo.ExistOriginUrlAsync(request.OriginalUrl);
-            if (existUrl)
-                return new ServiceResponseWithData<string>(default, false, System.Net.HttpStatusCode.BadRequest,"This url is already exist!");
-
-            if(!string.IsNullOrEmpty(request.OriginalUrl) && request.OriginalUrl.EndsWith("/"))
+            if (!string.IsNullOrEmpty(request.OriginalUrl) && request.OriginalUrl.EndsWith("/"))
             {
                 request.OriginalUrl = request.OriginalUrl.TrimEnd('/');
             }
+            var existUrl=await repo.ExistOriginUrlAsync(request.OriginalUrl);
+            if (existUrl)
+                return new ServiceResponseWithData<string>(default, false, System.Net.HttpStatusCode.BadRequest,"This url is already exist!");
+
+            
             var shortCode = GenerateShortCode();
             var newUrl = new UrlMapping()
             {

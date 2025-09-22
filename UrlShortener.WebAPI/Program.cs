@@ -4,6 +4,16 @@ using static UrlShortener.Persistence.ServiceRegistration;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy
+            .AllowAnyOrigin()   // butun origin-lere icaze
+            .AllowAnyHeader()   // butun header-lere icaze
+            .AllowAnyMethod();  // GET, POST, PUT, DELETE...
+    });
+});
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -14,6 +24,8 @@ builder.Services.AddApplicationRegistration();
 builder.Services.AddPersistenceRegistration(builder.Configuration);
 
 var app = builder.Build();
+// Use CORS
+app.UseCors("AllowAll");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
