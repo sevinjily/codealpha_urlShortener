@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "2UFPvrZ+dG+2lRSaLbPAL37+C+P2QuitQckNHDvPXEA=",
+  "Source": "UrlShortener.WebAPI",
+  "BasePath": "_content/UrlShortener.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
