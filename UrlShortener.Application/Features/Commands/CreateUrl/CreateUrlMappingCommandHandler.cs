@@ -15,8 +15,8 @@ namespace UrlShortener.Application.Features.Commands.CreateUrl
         }
         public async Task<ServiceResponseWithData<string>> Handle(CreateUrlMappingCommand request, CancellationToken cancellationToken)
         {
-             var existUrl=repo.ExistUrl(request.OriginalUrl);
-            if (existUrl == true)
+             var existUrl=await repo.ExistUrlAsync(request.OriginalUrl);
+            if (existUrl)
                 return new ServiceResponseWithData<string>(default, false, System.Net.HttpStatusCode.BadRequest,"This url is already exist!");
             //(false, System.Net.HttpStatusCode.BadRequest, "This url already exist!", default)
             var shortCode = GenerateShortCode();
@@ -27,7 +27,7 @@ namespace UrlShortener.Application.Features.Commands.CreateUrl
 
             };
 
-            await repo.CreateAsync(newUrl.ToString());
+            await repo.CreateAsync(request.OriginalUrl,shortCode);
             return new ServiceResponseWithData<string>(newUrl.ShortCode, true, System.Net.HttpStatusCode.Created,"Url created successfully!");
         }
         private string GenerateShortCode()

@@ -5,7 +5,6 @@ C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Domain\obj\
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Domain\obj\Debug\net8.0\UrlShortener.Domain.AssemblyInfoInputs.cache
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Domain\obj\Debug\net8.0\UrlShortener.Domain.AssemblyInfo.cs
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Domain\obj\Debug\net8.0\UrlShortener.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Domain\obj\Debug\net8.0\UrlShortener.Domain.sourcelink.json
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Domain\obj\Debug\net8.0\UrlShortener.Domain.dll
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Domain\obj\Debug\net8.0\refint\UrlShortener.Domain.dll
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Domain\obj\Debug\net8.0\UrlShortener.Domain.pdb

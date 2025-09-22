@@ -11,7 +11,6 @@ C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Persistence
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Persistence\obj\Debug\net8.0\UrlShortener.Persistence.AssemblyInfoInputs.cache
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Persistence\obj\Debug\net8.0\UrlShortener.Persistence.AssemblyInfo.cs
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Persistence\obj\Debug\net8.0\UrlShortener.Persistence.csproj.CoreCompileInputs.cache
-C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Persistence\obj\Debug\net8.0\UrlShortener.Persistence.sourcelink.json
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Persistence\obj\Debug\net8.0\UrlShort.FD555563.Up2Date
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Persistence\obj\Debug\net8.0\UrlShortener.Persistence.dll
 C:\Users\Asus\Desktop\.Net-Onion\CodeAlpha\UrlShortener\UrlShortener.Persistence\obj\Debug\net8.0\refint\UrlShortener.Persistence.dll

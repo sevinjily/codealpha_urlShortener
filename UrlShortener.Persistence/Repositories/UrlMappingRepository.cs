@@ -13,25 +13,26 @@ namespace UrlShortener.Persistence.Repositories
         {
             this.context = context;
         }
-        public async Task<string> CreateAsync(string url)
+        public async Task<string> CreateAsync(string url,string shortCode)
         {
-            var existUrl=context.Urls.FirstOrDefaultAsync(x=>x.OriginUrl==url);
+            var existUrl= await context.Urls.FirstOrDefaultAsync(x=>x.OriginUrl==url);
             if (existUrl != null)
             {
-                var newUrl = new UrlMapping()
-                {
-                    OriginUrl = url,
-                    ShortCode = string.Empty,
-                };
-    
-           await context.Urls.AddAsync(newUrl);
+                return existUrl.ShortCode;
+            }
+            var newUrl = new UrlMapping()
+            {
+                OriginUrl = url,
+                ShortCode = shortCode,
+            };
+
+            await context.Urls.AddAsync(newUrl);
             await context.SaveChangesAsync();
             return newUrl.ShortCode;
             }
 
-            return null;
 
-        }
+        
 
         public async Task<UrlMapping?> GetOriginUrlByShortCodeAsync(string shortCode)
         {
@@ -49,11 +50,9 @@ namespace UrlShortener.Persistence.Repositories
 
             return findUrl;
         }
-        public  bool ExistUrl(string originalUrl)
+        public async Task<bool> ExistUrlAsync(string originalUrl)
         {
-            var existUrl=context.Urls.FirstOrDefault(x=>x.OriginUrl == originalUrl);
-            if (existUrl == null) return false;
-             return true;
+            return await context.Urls.AnyAsync(x => x.OriginUrl == originalUrl);
 
         }
         //private string GenerateShortCode()
