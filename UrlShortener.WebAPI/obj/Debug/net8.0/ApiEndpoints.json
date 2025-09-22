@@ -14,5 +14,37 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UrlShortener.WebAPI.Controllers.UrlMappingController",
+    "Method": "GetOriginUrl",
+    "RelativePath": "api/UrlMapping/GetOriginUrl",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ShortCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UrlShortener.WebAPI.Controllers.UrlMappingController",
+    "Method": "GetShortCode",
+    "RelativePath": "api/UrlMapping/GetShortCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "OriginUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

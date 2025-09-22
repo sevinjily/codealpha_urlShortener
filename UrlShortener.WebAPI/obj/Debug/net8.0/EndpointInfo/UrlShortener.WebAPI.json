@@ -35,6 +35,48 @@
           }
         }
       }
+    },
+    "/api/UrlMapping/GetOriginUrl": {
+      "get": {
+        "tags": [
+          "UrlMapping"
+        ],
+        "parameters": [
+          {
+            "name": "ShortCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/UrlMapping/GetShortCode": {
+      "get": {
+        "tags": [
+          "UrlMapping"
+        ],
+        "parameters": [
+          {
+            "name": "OriginUrl",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
